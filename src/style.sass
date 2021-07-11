@@ -1,0 +1,490 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap')
+
+.article
+    &__heading
+        font-size: 30px
+        font-family: 'Oswald', sans-serif
+
+    &__underline
+        width: 100px
+        height: 2px
+        border-radius: 1px
+        background-color: #000
+
+    &__text
+        font-size: 20px
+        font-family: 'Oswald', sans-serif
+
+@mixin line-default
+    width: 100px
+    height: 2px
+    margin: 20px auto
+
+@mixin setup-images
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+
+*
+    margin: 0
+    padding: 0
+    list-style: none
+
+.wrapper-slide
+    height: 100vh
+    background-color: #fff
+
+.logo
+    position: absolute
+    z-index: 2
+    width: 220px
+    height: 100px
+    background-color: #282828
+    border-radius: 2px
+    margin: 30px
+
+    &__company
+        font-size: 50px
+        font-family: 'Noto Sans', sans-serif
+        color: white
+        text-align: right
+        margin-right: 15px
+    
+    &__slogan
+        font-size: 20px
+        font-family: 'Source Sans Pro', sans-serif
+        color: white
+        text-align: right
+        margin-right: 15px
+
+.burger
+    position: absolute
+    top: 50px
+    right: 50px
+    border: none
+    background-color: transparent
+    margin: 0 auto
+    z-index: 20
+    position: fixed
+
+    &__line-top
+        display: block
+        width: 30px
+        height: 4px
+        border-radius: 2px
+        margin-bottom: 10px
+        background-color: #000000
+
+    &__line-bot
+        display: block
+        width: 30px
+        height: 4px
+        border-radius: 2px
+        margin-top: 10px
+        background-color: #000000
+
+.menu
+    position: fixed
+    right: 0
+    top: 0
+    display: flex
+    z-index: 10
+    height: 100vh
+    transform: translateX(300px)
+    transition-duration: 0.8s
+    transition-delay: 0s
+    transition-timing-function: ease-out
+    width: 300px
+    background-color: rgba(192,192,192, 0.5)
+    
+    &__wrapper
+        margin-top: 20px
+
+    &__item
+        height: 30px
+        margin: 0 0 10px 20px
+        display: block
+        transition-duration: 0.5s
+        transition-timing-function: easy-in-out
+    
+    &__ref
+        text-decoration: none
+        color: black
+
+    &__item:hover
+        transform: scale(1.1, 1.1)
+        transition-duration: 0.5s
+        transition-timing-function: easy-in-out
+
+.start-slide
+    position: fixed
+    z-index: 1
+
+    &__video
+        width: 100vw
+
+.about-project
+    position: relative
+    top: 100vh
+    z-index: 2
+
+    .club
+        height: 90vh
+        background-color: #fff
+        display: flex
+        flex-direction: row
+
+        &__article
+            width: 50vw
+            display: flex
+            flex-direction: column
+            justify-content: center
+        
+        &__text
+            margin: 0 50px
+
+        &__underline
+            margin: 20px 0
+
+        &__img
+            width: 50vw
+            background-image: url('../src/img/poster-svoyak.jpg')
+            @include setup-images
+
+    .haritage
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: center
+
+        &__article
+            width: 40vw
+
+        &__text
+            margin: 0 50px
+
+        &__underline
+            margin: 20px 0
+
+        &__img
+            position: relative
+            
+            &_background
+                width: 40vw
+                height: 40vw
+                background-image: url('../src/img/ussr.jpg')
+                @include setup-images
+
+            &_background_active
+                width: 40vw
+                height: 40vw
+                position: absolute
+                top: 0vw
+                left: 0vw
+                transition-duration: 0.5s
+                transition-timing-function: ease-in-out
+
+            &_background_active:hover
+                background: #f7f7f744
+                box-shadow: inset 0 0 5vw rgb(0 0 0)
+
+    .neighbors
+        display: flex
+        flex-direction: column
+        justify-content: space-evenly
+        text-align: center
+
+        &__heading
+            font-size: 30px
+            font-family: 'Oswald', sans-serif
+            
+        &__img
+            height: 600px
+            width: 1000px
+            background-image: url('../src/img/getto.jpg')
+            @include setup-images
+            margin: 0 auto
+
+        &__article
+            font-size: 20px
+            font-family: 'Oswald', sans-serif
+
+    .event
+        height: 90vh
+        display: flex
+        text-align: center
+
+        &__article
+            width: 80vw
+            margin: auto
+
+        &__underline
+            margin: 20px auto
+
+    .paint
+        display: flex
+        flex-direction: column
+        justify-content: space-evenly
+
+        &__article
+            display: flex
+            flex-direction: column
+            align-items: center
+            text-align: center
+
+        &__underline
+            margin: 20px 0
+
+        .graffity
+            display: flex
+            flex-direction: row
+            justify-content: space-evenly
+
+            &__first
+                background-image: url('../src/img/graffiti1.jpg')
+                @include setup-images
+            
+            &__second
+                background-image: url('../src/img/graffiti4.jpg')
+                @include setup-images
+
+            &__third
+                background-image: url('../src/img/graffiti6.jpg')
+                @include setup-images
+        
+        .graffity-size
+            width: 400px
+            height: 400px
+            transition-duration: 0.5s
+            transition-timing-function: easy-in-out
+
+        .graffity-size:hover
+            transform: scale(1.1)
+            transition-duration: 0.5s
+            transition-timing-function: easy-in-out
+
+    .spa
+        height: 100vh
+        background-image: url('../src/img/spa1.jpg')
+        @include setup-images
+        display: flex
+        justify-content: center
+
+        &__article
+            display: flex
+            flex-direction: column
+            justify-content: center
+            text-align: center
+        
+        &__heading
+            color: #f5f5f5
+
+        &__underline
+            background-color: #f5f5f5
+            margin: 20px auto
+
+        &__text
+            color: #f5f5f5
+    
+    .infrastructure
+        display: flex
+        flex-direction: column
+        justify-content: space-evenly
+        text-align: center
+
+        &__heading
+            font-size: 30px
+            font-family: 'Oswald', sans-serif
+
+        &__article
+            font-size: 20px
+            font-family: 'Oswald', sans-serif
+
+        .slider
+            display: flex
+            justify-content: space-around
+            align-items: center
+
+            .slide1
+                width: 20vw
+                height: 15vw
+                @include setup-images
+                transition-duration: 0.5s
+                transition-timing-function: easy-in-out
+
+            .slide2
+                width: 55vw
+                height: 40vw
+                position: relative
+                @include setup-images
+                transition-duration: 0.5s
+                transition-timing-function: easy-in-out
+
+            .slide3
+                width: 20vw
+                height: 15vw
+                @include setup-images
+                transition-duration: 0.5s
+                transition-timing-function: easy-in-out
+
+            button
+                position: absolute
+                width: 30%
+                height: 100%
+                background-color: inherit
+                border: 0px
+                padding: 5%
+
+            .arrow-left
+                left: 0px
+                text-align: start
+            
+            .arrow-right
+                right: 0px
+                text-align: end
+.feedback
+    height: 30vh
+    background-color: #f0f0f0
+    display: flex
+    flex-direction: column
+    justify-content: space-evenly
+
+    &__heading
+        font-size: 30px
+        font-family: 'Oswald', sans-serif
+        text-align: center
+
+    &__item
+        display: flex
+        justify-content: space-around
+        align-items: center
+
+    &__text
+        width: 40vw
+        font-size: 20px
+        font-family: 'Oswald', sans-serif
+        text-align: center
+
+    &__photo
+        height: 150px
+        width: 150px
+        border-radius: 50%
+        background-image: url('../src/img/feedback.jpg')
+        @include setup-images
+    
+    &__name
+        font-size: 15px
+        font-family: 'Oswald', sans-serif
+        text-align: center
+
+.map
+    display: flex
+    flex-direction: column
+    justify-content: space-evenly
+    align-items: center
+    text-align: center
+
+    &__heading
+        font-size: 30px
+        font-family: 'Oswald', sans-serif
+
+    &__ya
+        width: 80vw
+        height: 70vh
+
+.form-callback
+    height: 50vh
+    background-color: #f0f0f0
+    display: flex
+    flex-direction: column
+    justify-content: space-evenly
+    align-items: center
+
+    &__heading
+        width: 1200px
+
+    &__wrapper
+        width: 1200px
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+
+    &__photo-wrapper
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+
+    &__photo
+        height: 150px
+        width: 150px
+        border-radius: 50%
+        background-image: url('../src/img/photo.jpg')
+        @include setup-images
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+        transform-origin: center center
+        transition: all 0.5s ease-in-out 0s
+
+    &__photo:hover
+        transform: rotateX(0deg) rotateY(-30deg) rotateZ(0deg)
+        transform-origin: center center
+        transition: all 0.5s ease-in-out 0s
+
+    &__item
+        width: 460px
+        height: 30px
+        background-color: #f0f0f0
+        margin-bottom: 20px
+        border: 0px
+        border-bottom: 2px solid
+        outline: none
+    
+    &__contacts
+        margin-bottom: 40px
+        display: flex
+        flex-direction: column
+        
+        a
+            text-decoration: none
+            color: #C0C0C0	
+            transition-duration: 0.5s
+            transition-timing-function: easy-in-out
+
+        a:hover
+            color: #D2B48C
+            transition-duration: 0.5s
+            transition-timing-function: easy-in-out
+
+    &__links
+        margin-top: 20px
+
+        a
+            text-decoration: none
+            font-size: 30px
+            color: #C0C0C0
+            margin-right: 10px
+            transition-duration: 0.5s
+            transition-timing-function: easy-in-out
+
+        a:hover
+            color: #D2B48C
+            transition-duration: 0.5s
+            transition-timing-function: easy-in-out
+
+    &__form-wrapper
+        width: 460px
+
+    &__button
+        width: 200px
+        height: 50px
+        border-radius: 25px
+        background-color: #C0C0C0
+        transition-duration: 0.5s
+        transition-timing-function: easy-in-out
+        border: 0px
+    
+    &__button:hover
+        background-color: #D2B48C
+        transition-duration: 0.5s
+        transition-timing-function: easy-in-out
