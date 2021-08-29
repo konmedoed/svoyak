@@ -1,1 +1,71 @@
-(()=>{"use strict";var e={91:e=>{e.exports=function(e,r){return r||(r={}),e?(e=String(e.__esModule?e.default:e),r.hash&&(e+=r.hash),r.maybeNeedQuotes&&/[\t\n\f\r "'=<>`]/.test(e)?'"'.concat(e,'"'):e):e}},747:(e,r,t)=>{t.r(r);var o=t(91),n=t.n(o),a=new URL(t(747),t.b);n()(a),console.log("working ska!")}},r={};function t(o){var n=r[o];if(void 0!==n)return n.exports;var a=r[o]={exports:{}};return e[o](a,a.exports,t),a.exports}t.m=e,t.n=e=>{var r=e&&e.__esModule?()=>e.default:()=>e;return t.d(r,{a:r}),r},t.d=(e,r)=>{for(var o in r)t.o(r,o)&&!t.o(e,o)&&Object.defineProperty(e,o,{enumerable:!0,get:r[o]})},t.o=(e,r)=>Object.prototype.hasOwnProperty.call(e,r),t.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},t.b=document.baseURI||self.location.href,t(747)})();
+document.querySelector('.burger').addEventListener('click', openNavPanel);
+
+function openNavPanel(){
+    document.querySelector('.menu').style.transform = "translateX(0px)";
+    let area = document.querySelectorAll('body > div:not(.menu)');
+    for (let points of area){
+        points.addEventListener('click', closeNavPanel)
+    }
+    document.querySelector('.burger').removeEventListener('click', openNavPanel);
+    document.querySelector('.burger').addEventListener('click', closeNavPanel);
+}
+
+function closeNavPanel(){
+    document.querySelector('.menu').style.transform = "translateX(300px)";
+    document.querySelector('.burger').removeEventListener('click', closeNavPanel);
+    document.querySelector('.burger').addEventListener('click', openNavPanel);
+}
+
+let slides = ['url(../src/img/beer.jpg)', 'url(../src/img/bet.jpg)', 'url(../src/img/doner.jpg)', 'url(../src/img/finance.jpg)', 'url(../src/img/garage.jpg)'];
+let slide1 = 0;
+let slide2 = 1;
+let slide3 = 2;
+let lastSlide = slides.length-1;
+
+function drawSlides(){
+    document.querySelector('.slide1').style.backgroundImage = slides[slide1];
+    document.querySelector('.slide2').style.backgroundImage = slides[slide2];
+    document.querySelector('.slide3').style.backgroundImage = slides[slide3];
+}
+
+document.querySelector('.arrow-left').addEventListener('click', previousSlide);
+document.querySelector('.arrow-right').addEventListener('click', nextSlide);
+
+function checkSlides(){
+    if(slide1<0){
+        slide1=lastSlide;
+    }
+    if(slide2<0){
+        slide2=lastSlide;
+    }
+    if(slide3<0){
+        slide3=lastSlide;
+    }
+    if (slide1>lastSlide){
+        slide1=0;
+    }
+    if (slide2>lastSlide){
+        slide2=0;
+    }
+    if (slide3>lastSlide){
+        slide3=0;
+    }
+}
+
+function nextSlide(){
+    slide1++;
+    slide2++;
+    slide3++;
+    checkSlides();
+    drawSlides();
+}
+
+function previousSlide(){
+    slide1--;
+    slide2--;
+    slide3--;
+    checkSlides();
+    drawSlides();
+}
+
+drawSlides()

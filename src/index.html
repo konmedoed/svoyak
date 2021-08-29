@@ -11,8 +11,7 @@
 </head>
 <body>
   <div class="logo">
-    <div class="logo__company">СВОЯК</div>
-    <div class="logo__slogan">фраерам тут не место</div>
+    <img class="img" src="../src/img/svoyak.png" alt="">
   </div>
   <button class="burger">
     <span class="burger__line-top"></span>
@@ -20,76 +19,85 @@
   </button>
   <div class="menu">
       <ul class="menu__wrapper">
-        <li class="menu__item article__text"><a class="menu__ref" href="#about-project">О проекте</a></li>
-        <li class="menu__item article__text"><a class="menu__ref" href="#infrastructure">Инфраструктура</a></li>
-        <li class="menu__item article__text"><a class="menu__ref" href="#feedback">Отзывы</a></li>
-        <li class="menu__item article__text"><a class="menu__ref" href="#map">Местоположение</a></li>
-        <li class="menu__item article__text"><a class="menu__ref" href="#form-callback">Контакты</a></li>
+        <li class="menu__item text text_size_m"><a class="menu__ref" href="#about-project">О проекте</a></li>
+        <li class="menu__item text text_size_m"><a class="menu__ref" href="#infrastructure">Инфраструктура</a></li>
+        <li class="menu__item text text_size_m"><a class="menu__ref" href="#feedback">Отзывы</a></li>
+        <li class="menu__item text text_size_m"><a class="menu__ref" href="#map">Местоположение</a></li>
+        <li class="menu__item text text_size_m"><a class="menu__ref" href="#form-callback">Контакты</a></li>
       </ul>
   </div>
   <div class="start-slide">
     <video class="start-slide__video" src="img/svoyak.mp4" muted autoplay loop poster="img/poster-svoyak.jpg"></video>
   </div>
   <div class="about-project">
-    <div class="club wrapper-slide">
+    <div class="club wrapper-slide wrapper-slide_white">
       <div class="club__article">
-        <div class="club__text article">
+        <div class="club__text">
           <a name="about-project"></a>
-          <h2 class="article__heading">Клубный дом</h2>
-          <div class="article__underline club__underline"></div>
-          <div class="article__text">Клубный дом - это не просто здание с квартирыми. Клубный дом - это комплекс решений для комфортной жизни! Жители «Свояка» - люди со схожими интересами и жизненными принципами. Вместе они создают закрытый клуб единомышленников, в котором нет места посторонним.</div>
+          <h2 class="text text_size_l">Клубный дом</h2>
+          <div class="underline club__underline"></div>
+          <div class="text text_size_m">Клубный дом - это не просто здание с квартирыми. Клубный дом - это комплекс решений для комфортной жизни! Жители «Свояка» - люди со схожими интересами и жизненными принципами. Вместе они создают закрытый клуб единомышленников, в котором нет места посторонним.</div>
         </div>
       </div>
-      <div class="club__img"></div>
+      <div class="club__image">
+        <img class="img" src="../src/img/poster-svoyak.jpg" alt="">
+      </div>
     </div>
-    <div class="haritage wrapper-slide">
+    <div class="haritage wrapper-slide wrapper-slide_gray">
       <div class="haritage__article">
-        <div class="haritage__text article">
-          <h2 class="article__heading">Наследие великой империи!</h2>
-          <div class="article__underline haritage__underline"></div>
-          <div class="article__text">Это не современный дом, про него нельзя сказать "пластмассовый мир победил". Это дом из проверенных временем материалов: кирпича, дерева, шлака и цемента. Это дом был построен в начале 20-го века, советскими строителями, советскими инженерами и по советским технологиям! Этот дом не сравнится с современными ведь каждый знает, что раньше было лучше!</div>
+        <div class="haritage__text"> <!--article-->
+          <h2 class="text text_size_l">Наследие великой империи!</h2>
+          <div class="underline haritage__underline"></div>
+          <div class="text text_size_m">Это не современный дом, про него нельзя сказать "пластмассовый мир победил". Это дом из проверенных временем материалов: кирпича, дерева, шлака и цемента. Это дом был построен в начале 20-го века, советскими строителями, советскими инженерами и по советским технологиям! Этот дом не сравнится с современными ведь каждый знает, что раньше было лучше!</div>
         </div>
       </div>
-      <div class="haritage__img">
-        <div class="haritage__img_background"></div>
-        <div class="haritage__img_background_active"></div>
+      <div class="haritage__image">
+        <img class="img" src="../src/img/ussr.jpg" alt="">
       </div>
     </div>
-    <div class="neighbors wrapper-slide">
-      <h2 class="neighbors__heading">Свой круг</h2>
-      <div class="neighbors__img"></div>
-      <div class="neighbors__article">Жители «Свояка» - люди со схожими интересами и жизненными принципами. Вместе они создают закрытый клуб единомышленников, в котором нет места посторонним.</div>
+    <div class="neighbors wrapper-slide wrapper-slide_white">
+      <h2 class="text text_size_l">Свой круг</h2>
+      <div class="neighbors__image">
+        <img class="img" src="../src/img/getto.jpg" alt="">
+      </div>
+      <div class="text text_size_m">Жители «Свояка» - люди со схожими интересами и жизненными принципами. Вместе они создают закрытый клуб единомышленников, в котором нет места посторонним.</div>
     </div>
-    <div class="event wrapper-slide">
-      <div class="event__article article">
-        <h2 class="article__heading">В центре событий</h2>
-        <div class="article__underline event__underline"></div>
-        <div class="article__text event__text">Клубный дом расположен рядом со злачными и культовыми местами великого города: сортировочная платформа октябрьской железной дороги, глухие и неосвещенные парки и скверы, ровно по центру между первыми и вторыми Крестами и в окружении церквей. <br> «Свояк» единовременно сочетает в себе престиж жизни в центре Санкт-Петербурга с его деловой активностью и культурными традициями с полной приватностью и камерностью.</div>
+    <div class="event wrapper-slide wrapper-slide_gray">
+      <div class="event__article">
+        <h2 class="text text_size_l">В центре событий</h2>
+        <div class="underline event__underline"></div>
+        <div class="text text_size_m">Клубный дом расположен рядом со злачными и культовыми местами великого города: сортировочная платформа октябрьской железной дороги, глухие и неосвещенные парки и скверы, ровно по центру между первыми и вторыми Крестами и в окружении церквей. <br> «Свояк» единовременно сочетает в себе престиж жизни в центре Санкт-Петербурга с его деловой активностью и культурными традициями с полной приватностью и камерностью.</div>
       </div>
     </div>
-    <div class="paint wrapper-slide">
-      <div class="article paint__article">
-        <h2 class="article__heading">Современное искусство у вас во дворе!</h2>
-        <div class="article__underline paint__underline"></div>
-        <div class="article__text">Концепция клубного дома подразумевает, что для жильцов всё должно быть под рукой, в том числе и культурный отдых. <br> Во дворе представлены работы современных мастеров граффити в стиле "underground".</div>
+    <div class="graffity wrapper-slide wrapper-slide_white">
+      <div class="graffity__article">
+        <h2 class="text text_size_l">Современное искусство у вас во дворе!</h2>
+        <div class="underline graffity__underline"></div>
+        <div class="text text_size_m">Концепция клубного дома подразумевает, что для жильцов всё должно быть под рукой, в том числе и культурный отдых. <br> Во дворе представлены работы современных мастеров граффити в стиле "underground".</div>
       </div>
-      <div class="graffity"> <!--подкорректировать-->
-        <div class="graffity__first graffity-size"></div>
-        <div class="graffity__second graffity-size"></div>
-        <div class="graffity__third graffity-size"></div>
+      <div class="graffity__elements">
+        <div class="graffity__element">
+          <img class="img" src="../src/img/graffiti1.jpg" alt="">
+        </div>
+        <div class="graffity__element">
+          <img class="img" src="../src/img/graffiti4.jpg" alt="">
+        </div>
+        <div class="graffity__element">
+          <img class="img" src="../src/img/graffiti6.jpg" alt="">
+        </div>
       </div>
     </div>
     <div class="spa">
-      <div class="article spa__article">
-        <h2 class="article__heading spa__heading">Спа комплекс прямо во дворе!</h2>
-        <div class="article__underline spa__underline"></div>
-        <div class="article__text spa__text">Больше нет необходимости ехать куда-то ехать, бронировать места, ведь спа салон у вас прямо во дворе!</div>
+      <div class="spa__article">
+        <h2 class="text text_size_l text_white">Спа комплекс прямо во дворе!</h2>
+        <div class="underline_white underline spa__underline"></div>
+        <div class="text text_size_m text_white">Больше нет необходимости ехать куда-то ехать, бронировать места, ведь спа салон у вас прямо во дворе!</div>
       </div>
     </div>
-    <div class="infrastructure wrapper-slide">
+    <div class="infrastructure wrapper-slide wrapper-slide_gray">
       <a name="infrastructure"></a>
-      <h2 class="infrastructure__heading">Всё под рукой</h2>
-      <div class="infrastructure__article">Комфорт будущих жильцов - наш приоритет, поэтому рядом с домом находится все самое необходимое!</div>
+      <h2 class="text text_size_l">Всё под рукой</h2>
+      <div class="text text_size_m">Комфорт будущих жильцов - наш приоритет, поэтому рядом с домом находится все самое необходимое!</div>
       <div class="slider">
         <div class="slide1"></div>
         <div class="slide2">
@@ -109,54 +117,56 @@
     </div>
     <div class="feedback">
       <a name="feedback"></a>
-      <div class="feedback__heading">Наши кленты о нас</div>
+      <div class="feedback__heading text text_size_l">Наши кленты о нас</div>
       <div class="feedback__item">
-        <div class="feedback__text">Пацаны вообще ребята!</div>
+        <div class="feedback__text text text_size_m">Пацаны вообще ребята!</div>
         <div class="feedback__person">
           <div class="feedback__photo"></div>
-          <div class="feedback__name">Борис Адидасович</div>
+          <div class="feedback__name text text_size_s">Борис Адидасович</div>
         </div>
       </div>
     </div>
-    <div class="map wrapper-slide">
+    <div class="map wrapper-slide wrapper-slide_gray">
       <a name="map"></a>
-      <h2 class="map__heading">Местоположение</h2>
+      <h2 class="text text_size_l">Местоположение</h2>
       <div class="map__ya">
-      <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af01d2b80637162fa59b95190a42ed63de9dd07b7bd2f66057945e0f48989de29&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af01d2b80637162fa59b95190a42ed63de9dd07b7bd2f66057945e0f48989de29&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
       </div>
     </div>
     <div class="form-callback">
       <a name="form-callback"></a>
-      <div class="form-callback__heading  article__heading">Наши контакты</div>
-      <div class="form-callback__wrapper">
-        <div class="form-callback__photo-wrapper">
-          <div class="form-callback__photo"></div>
-          <div class="form-callback__name article__text">Костин Кирилл Олегович</div>
-        </div>
-        <div class="form-callback__contacts-wrapper">
-          <div class="form-callback__contacts article__text">
-            <a href="tel:+79818124775">Телефон: +7 981 812 4775</a>
-            <a href="mailto:konmedoed@gmail.com">Почта: konmedoed@gmail.com</a>
+      <div class="form-callback__block">
+        <div class="form-callback__heading  text text_size_l">Наши контакты</div>
+        <div class="form-callback__wrapper">
+          <div class="form-callback__photo-wrapper">
+            <div class="form-callback__photo"></div>
+            <div class="form-callback__name text text_size_m">Костин Кирилл Олегович</div>
           </div>
-          <div class="form-callback__subheading article__text">Соц. сети и мессенджеры:</div>
-          <div class="form-callback__links">
-              <a href="https://vk.com/kostin_ko">
-                <i class="fa fa-vk"></i>
-              </a>
-              <a href="http://www.instagram.com/konmedoed">
-                <i class="fa fa-instagram"></i>
-              </a>
-              <a href="https://t.me/konmedoed">
-                <i class="fa fa-telegram"></i>
-              </a>
+          <div class="form-callback__contacts-wrapper">
+            <div class="form-callback__contacts text text_size_m">
+              <a href="tel:+79818124775">Телефон: +7 981 812 4775</a>
+              <a href="mailto:konmedoed@gmail.com">Почта: konmedoed@gmail.com</a>
+            </div>
+            <div class="form-callback__subheading text text_size_m">Соц. сети и мессенджеры:</div>
+            <div class="form-callback__links">
+                <a href="https://vk.com/kostin_ko">
+                  <i class="fa fa-vk"></i>
+                </a>
+                <a href="http://www.instagram.com/konmedoed">
+                  <i class="fa fa-instagram"></i>
+                </a>
+                <a href="https://t.me/konmedoed">
+                  <i class="fa fa-telegram"></i>
+                </a>
+            </div>
           </div>
+          <form action="" class="form-callback__form-wrapper">
+            <input type="email" name="" id="" class="form-callback__item text text_size_m" placeholder="Введите e-mail">
+            <input type="text" name="" id="" class="form-callback__item text text_size_m" placeholder="Ваше имя">
+            <input type="text" name="" id="" class="form-callback__item text text_size_m" placeholder="Введите сообщение">
+            <button class="form-callback__button text text_size_m" type="submit">Отправить</button>
+          </form>
         </div>
-        <form action="" class="form-callback__form-wrapper">
-          <input type="email" name="" id="" class="form-callback__item article__text" placeholder="Введите e-mail">
-          <input type="text" name="" id="" class="form-callback__item article__text" placeholder="Ваше имя">
-          <input type="text" name="" id="" class="form-callback__item article__text" placeholder="Введите сообщение">
-          <button class="form-callback__button article__text" type="submit">Отправить</button>
-        </form>
       </div>
     </div>
   </div>
