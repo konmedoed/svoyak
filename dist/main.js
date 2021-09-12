@@ -11,7 +11,15 @@ function openNavPanel(){
 }
 
 function closeNavPanel(){
-    document.querySelector('.menu').style.transform = "translateX(300px)";
+    let widthOfWindow=window.innerWidth;
+    let mobile = "translateX(100vw)";
+    let desktop = "translateX(300px)";
+    if (widthOfWindow<598){
+        document.querySelector('.menu').style.transform = mobile;
+    }
+    else{
+        document.querySelector('.menu').style.transform = desktop;
+    }
     document.querySelector('.burger').removeEventListener('click', closeNavPanel);
     document.querySelector('.burger').addEventListener('click', openNavPanel);
 }

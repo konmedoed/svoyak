@@ -218,7 +218,6 @@
 
         &__elements
             display: flex
-            flex-direction: row
             justify-content: space-evenly
 
         &__element
@@ -342,23 +341,16 @@
     display: flex
 
     &__block
-        max-width: 1200px
+        width: 1200px
         margin: 0 auto
         padding: 0 20px
         display: flex
-        flex-direction: column
         justify-content: space-evenly
         align-items: center
+        flex-wrap: wrap
 
     &__heading
-        width: 100%
-
-    &__wrapper
-        width: 100%
-        margin: 0 20px
-        display: flex
-        flex-direction: row
-        justify-content: space-between
+        flex: 0 1 100%
 
     &__photo-wrapper
         flex: 0 1 20%
@@ -427,6 +419,9 @@
 
     &__form-wrapper
         flex: 0 1 30%
+        display: flex
+        flex-direction: column
+        align-items: center
 
     &__button
         width: 100%
@@ -441,3 +436,223 @@
         background-color: #D2B48C
         transition-duration: 0.5s
         transition-timing-function: easy-in-out
+
+@media (max-width: 768px)
+    .about-project
+        .club
+            flex-direction: column
+            
+            &__text
+                margin: 0 20px
+
+        .haritage
+            flex-direction: column
+
+            &__article
+                display: flex
+                align-items: center
+
+            &__text
+                margin: 0 20px
+
+@media (max-width: 991.98px)
+    .form-callback
+        height: 100vh
+
+        &__wrapper
+            flex-wrap: wrap
+
+        &__form-wrapper
+            flex: 0 1 100%
+
+        &__button
+            width: 400px
+
+// Extra small devices (portrait phones, less than 576px)
+// @media (max-width: 575.98px)
+//     .burger
+//         right: 30px
+
+//     .menu
+//         width: 100%
+//         transform: translateX(100vw)
+
+//         &__wrapper
+//             margin: 0
+
+//         &__item
+//             width: 100vw
+//             text-align: center
+//             font-size: 40px
+//             margin: 20px 0
+//             height: inherit
+
+//     .form-callback   
+//         &__contacts-wrapper
+//             flex: 0 1 100%
+//             text-align: center
+
+//         &__photo-wrapper
+//             flex: 0 1 100%
+
+//         &__contacts
+//             margin: 10px 0
+
+//         &__links
+//             display: flex
+//             justify-content: space-evenly
+//             margin: 10px 0
+
+//             a
+//                 font-size: 50px
+        
+//         &__item
+//             width: 100%
+
+//         &__button
+//             width: 100%
+
+//     .about-project
+        // .club
+        //     &__underline
+        //         margin: 10px 0
+
+        // .haritage
+        //     &__underline
+        //         margin: 10px 0
+
+        // .graffity
+        //     &__underline
+        //         margin: 10px 0
+
+        //     &__element
+        //         height: 30vh
+        //         flex: 0 1 50%
+
+        //     &__elements
+        //         flex-wrap: wrap
+        //         justify-content: space-between
+                
+        //         div:first-child
+        //             flex: 0 1 100%
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px)
+    .form-callback   
+        &__contacts-wrapper
+            flex: 0 1 50%
+
+        &__photo-wrapper
+            flex: 0 1 50%
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px)
+    .form-callback   
+        &__contacts-wrapper
+            flex: 0 1 40%
+
+        &__photo-wrapper
+            flex: 0 1 40%
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px)
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px)
+
+@media screen and ( max-height: 600px)
+    .text
+        &_size_s
+            font-size: 10px
+
+        &_size_m
+            font-size: 15px
+
+        &_size_l
+            font-size: 20px
+
+    .form-callback 
+        &__links
+            a
+                font-size: 30px
+
+    .form-callback
+        &__photo
+            width: 100px
+            height: 100px
+
+        &__item
+            margin-bottom: 10px
+
+        &__button
+            height: 40px
+
+@media (max-width: 575.98px)
+    .burger
+        right: 30px
+
+    .menu
+        width: 100%
+        transform: translateX(100vw)
+
+        &__wrapper
+            margin: 0
+
+        &__item
+            width: 100vw
+            text-align: center
+            font-size: 40px
+            margin: 20px 0
+            height: inherit
+    
+    .feedback
+        height: 40vh
+
+    .form-callback   
+        &__contacts-wrapper
+            flex: 0 1 100%
+            text-align: center
+
+        &__photo-wrapper
+            flex: 0 1 100%
+
+        &__contacts
+            margin: 10px 0
+
+        &__links
+            display: flex
+            justify-content: space-evenly
+            margin: 10px 0
+
+            a
+                font-size: 50px
+        
+        &__item
+            width: 100%
+
+        &__button
+            width: 100%
+
+    .about-project
+        .club
+            &__underline
+                margin: 10px 0
+
+        .haritage
+            &__underline
+                margin: 10px 0
+
+        .graffity
+            &__underline
+                margin: 10px 0
+
+            &__element
+                height: 30vh
+                flex: 0 1 50%
+
+            &__elements
+                flex-wrap: wrap
+                justify-content: space-between
+                
+                div:first-child
+                    flex: 0 1 100%
