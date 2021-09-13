@@ -2,7 +2,7 @@ document.querySelector('.burger').addEventListener('click', openNavPanel);
 
 function openNavPanel(){
     document.querySelector('.menu').style.transform = "translateX(0px)";
-    let area = document.querySelectorAll('body > div:not(.menu)');
+    let area = document.querySelectorAll('body > div:not(.menu), .menu__item');
     for (let points of area){
         points.addEventListener('click', closeNavPanel)
     }
